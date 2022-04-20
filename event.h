@@ -10,7 +10,7 @@ typedef enum eventType{ ADD_CAR_EVENT, PRINT_ROADS_EVENT } eventType;
 typedef struct Event
 {
     //TODO:  Add information associated with the different events of your simulation.
-
+    int x;
 }  Event;
 
 

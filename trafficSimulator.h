@@ -23,12 +23,14 @@ typedef struct TrafficData
     /* priority queue of events where the priority represents the time the event will occur */
 
     /* track the number of cars still in the simulator */
-
+    Car cars[100];
     /* track the longest number of time steps that any light takes to cycle around */
+    int longestStep;
 
 }  TrafficData;
 
 void printNames( );
+void addCar();
 
 void trafficSimulator( char* filename );
 

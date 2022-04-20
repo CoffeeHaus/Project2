@@ -11,13 +11,13 @@ typedef struct RoadData
 {
     /* TODO - Add data associated with road.  Suggested data: */
     /* length of this road */
-
+    int length;
     /* information used to record/update whether the light at the end of this road is green or red */
 
     /* intersections this road starts from and moves to */
 
     /* array of cars associated with this road */
-
+    Queue * Cars;
     /* queue of cars waiting to enter this road */
 
 }  RoadData;

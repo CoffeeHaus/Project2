@@ -4,7 +4,9 @@
 typedef struct Car
 {
     //TODO:  Add information to store about cars
+    int serialNumber;
 
+    createRoad(z, fromVertex, length, greenOn, greenOff, cycleResets)
 }  Car;
 
 #endif
