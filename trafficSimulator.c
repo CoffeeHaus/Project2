@@ -11,7 +11,6 @@ TrafficData* readTrafficDataFromInputFile( char* name );
 void printNames( )
 {
     printf("This solution was completed by:\n");
-    printf("Samantha Murray\n");
     printf("Andrew Neumann\n");
 }
 
@@ -64,10 +63,14 @@ TrafficData* readTrafficDataFromInputFile( char* filename )
         {
             int fromVertex, length, greenOn, greenOff, cycleResets;
             if (fscanf(file, "%d\n", &numIncomingRoads) != 1) printf("ERROR");
-            for (int z = 0; z < numIncomingRoads; z++)
+            for (int i = 0; i < numIncomingRoads; i++)
             {
                 if (fscanf(file, "%d %d    %d %d %d\n", &fromVertex, &length, &greenOn, &greenOff, &cycleResets) != 5) printf("ERROR");
-                //createRoad(z, fromVertex, length, greenOn, greenOff, cycleResets)
+                else 
+                {
+                createRoad(fromVertex, i,  length, greenOn, greenOff, cycleResets);
+                }
+                
             }
             fscanf(file, "\n");
         }
@@ -85,7 +88,7 @@ TrafficData* readTrafficDataFromInputFile( char* filename )
             for (int d = 0; d < carsToEdge; d++)
             {
                 if(fscanf(file, "%d", &CarDestination) != 1) printf("ERROR");
-                //createCar(from, to, timestep, CarDestination)
+                createCar(from, to, timestep, CarDestination)
             }
             fscanf(file, "\n");
         }

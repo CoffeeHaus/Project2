@@ -3,8 +3,14 @@
 /* Suggested TODO - Write a function to create road.
  */
 RoadData* createRoad(int source, int destination, int length, int greenOn, int greenOff, int cycleResets)
-{
+{	
 RoadData * road = malloc(sizeof(RoadData));
+road->source = source;
+road->destination = destination;
+road->length = length;
+road->greenOff = greenOff;
+road->greenOn = greenOn;
+road->cycleResets = cycleResets;
 road->Cars = createQueue();
 
 }
@@ -18,6 +24,7 @@ void freeRoad(RoadData* road)
 
 /* Suggested TODO - Write a function that attempts to move the cars on a given road forward (if space ahead of them was empty).
  */
+
 
 /* Suggested TODO - Write a function to attempt to move the car at the first position on a given road
  * to the last position of a another given road.

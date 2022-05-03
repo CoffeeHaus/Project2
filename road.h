@@ -13,9 +13,10 @@ typedef struct RoadData
     /* length of this road */
     int length;
     /* information used to record/update whether the light at the end of this road is green or red */
-
+    bool lightGreen;
+    int greenOn, greenOff, cycleResets;
     /* intersections this road starts from and moves to */
-
+    int source, destination;
     /* array of cars associated with this road */
     Queue * Cars;
     /* queue of cars waiting to enter this road */
